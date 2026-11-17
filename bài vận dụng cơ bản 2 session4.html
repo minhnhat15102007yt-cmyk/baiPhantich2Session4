@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>bài vận dụng cơ bản 2 session4</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h2 id="bài-vận-dụng-cơ-bản-2">Bài vận dụng cơ bản 2</h2>
+<h4 id="prompt-hãy-viết-một-bài-chia-sẻ-về-kỹ-thuật-prompting-nâng-cao-logic--chuỗi-bằng-ngôn-ngữ-language.-dành-cho-đối-tượng-audience.">Prompt: Hãy viết một bài chia sẻ về Kỹ thuật Prompting Nâng cao (Logic &amp; Chuỗi) bằng ngôn ngữ [language]. Dành cho đối tượng {audience}.</h4>
+<h3 id="bước-1-phân-tích-lỗi">Bước 1: Phân tích lỗi</h3>
+<p>Cách đặt biến số lộn xộn giữa ngoặc vuông <code>[language]</code> và ngoặc nhọn <code>{audience}</code> trong cùng một prompt gây ra các vấn đề nghiêm trọng sau trong tự động hóa:</p>
+<ul>
+<li><strong>AI bị nhầm lẫn về ngữ nghĩa:</strong> Các mô hình ngôn ngữ lớn (LLM) thường được huấn luyện nhận diện các ký hiệu cú pháp cụ thể (như <code>{}</code> hoặc <code>[]</code>) để phân biệt biến động với văn bản tĩnh. Việc dùng lẫn lộn khiến AI không xác định chính xác đâu là phần cần điền dữ liệu.
+<ul>
+<li><strong>Lỗi hệ thống tự động hóa (Automated Parser):</strong> Các hệ thống code/script thay thế biến (như Python string formatting, Jinja2, hoặc các công cụ No-code như Make/Zapier) thường quét theo một cú pháp cố định (ví dụ: chỉ tìm <code>{bien}</code> hoặc chỉ tìm <code>[bien]</code>). Việc dùng lẫn lộn sẽ khiến hệ thống quét bỏ sót biến, dẫn đến việc dữ liệu động không được truyền vào hoặc làm lộ nguyên cụm cú pháp lỗi ra ngoài email/bản dịch.</li>
+</ul>
+<h3 id="bước-2-đồng-bộ-biến-số">Bước 2: Đồng bộ biến số</h3>
+</li>
+</ul>
+<p>Để khắc phục, chúng ta quy hoạch lại toàn bộ biến số về một định dạng nhất quán, viết hoa, rõ nghĩa để hệ thống tự động hóa dễ dàng đọc và thay thế.</p>
+<ul>
+<li><strong>Prompt đã được đồng bộ chuẩn hóa:</strong><br>
+Hãy viết một bài chia sẻ về Kỹ thuật Prompting Nâng cao (Logic &amp; Chuỗi) bằng ngôn ngữ <strong>[NGÔN_NGỮ]</strong>. Dành cho đối tượng <strong>[ĐỐI_TƯỢNG]</strong>.</li>
+</ul>
+</div>
+</body>
+
+</html>
